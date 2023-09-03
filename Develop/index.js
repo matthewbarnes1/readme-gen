@@ -1,5 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs').promises;
+const mrk = new Request('generated-readme.md');
+
 
 //* This array holds all of the neccesary questions for application MD file
 const questions = [
@@ -45,10 +48,6 @@ const questions = [
       },
     ];
 
-    //
-    inquirer.prompt(questions).then(questions => {
-        // console.log(`Hi ${questions.title}!`);
-      });
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
