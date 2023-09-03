@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('fs').promises;
-const mrk = new Request('generated-readme.md');
+const fs = require('fs');
+const MarkDown = require('/Users/matthewbarnes/readme-gen/Develop/generator.js')
 
 
 //* This array holds all of the neccesary questions for application MD file
@@ -14,12 +14,12 @@ const questions = [
     {
       type: 'input',
       message: 'Please enter a description: ',
-      name: 'descr',
+      name: 'description',
     },
     {
       type: 'input',
       message: 'Please enter installation info: ',
-      name: 'install',
+      name: 'installation',
     },
     {
         type: 'input',
@@ -30,11 +30,16 @@ const questions = [
         type: 'input',
         message: 'Please enter license info: ',
         name: 'license',
+        // * Choices gives multiplt options for the input
+        choices:['MIT', 'ISC', 'GNUPLv3'],
+        filter(val){
+          return val.toLowerCase();
+        }
       },    
       {
         type: 'input',
         message: 'Please enter contributing info: ',
-        name: 'contri',
+        name: 'contributing',
       },
       {
         type: 'input',
@@ -49,19 +54,28 @@ const questions = [
     ];
 
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//* Uses questions array to prompt user 
+function ABCDE(){
+  return inquirer.prompt(questions)
+  .then((answers) =>{
+    const mark = MarkDown.generateReadme(answers)
+    fs.writeFile('new-README.md', mark, function(err){
+      if(err){
+        console.log("Could not save file", err)
+      }else{
+        console.log('New README File generated!')
+      }
+      })
 
-// TODO: Create a function to initialize app
-function init() {}
+    console.log(mark);
+    return answers;
+  })
+  .catch((error) =>{
+  console.log(error)
+  })
+}
 
-// Function call to initialize app
-init();
+ABCDE()
 
-fs.readFile('generated-readme.md', 'utf8', (err, data) => {
-    if (err) {
-        console.error('Error reading the file:', err);
-        return;
 
-    }});
 
