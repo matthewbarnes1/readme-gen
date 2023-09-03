@@ -19,7 +19,7 @@
 
 
 ## Video tutorial
-[This is the video link!](https://drive.google.com/file/d/1nYAXa1bdhfhe6jnuKJUfZY5pFXIDh6n-/view?usp=sharing
+[Click here to be directed to video tutorial!](https://drive.google.com/file/d/1nYAXa1bdhfhe6jnuKJUfZY5pFXIDh6n-/view?usp=sharing
 )
 
 ## Setup & Usage
