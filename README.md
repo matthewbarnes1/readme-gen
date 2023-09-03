@@ -17,6 +17,11 @@
 **After complete, a new file named new-README.md will appear in the repo file!**
 ![Screenshot 2023-09-03 at 5 05 58 PM](https://github.com/matthewbarnes1/readme-gen/assets/139004105/ab8cdca2-bea9-42c3-abb3-1e6109e48428)
 
+
+## Video tutorial
+[![Watch the video]()][(https://youtu.be/vt5fpE0bzSY)](https://drive.google.com/file/d/1nYAXa1bdhfhe6jnuKJUfZY5pFXIDh6n-/view?usp=sharing
+)
+
 ## Setup & Usage
 - Download within from the develop folder within repo 
 - Ensure that node.js is installed on your PC
