@@ -8,33 +8,33 @@ const MarkDown = require('/Users/matthewbarnes/readme-gen/Develop/generator.js')
 const questions = [
     {
       type: 'input',
-      message: 'What is the projects title?: ',
+      message: 'Enter a title for project: ',
       name: 'title',
     },
     {
       type: 'input',
-      message: 'Please enter a description: ',
+      message: 'Enter a description of project: ',
       name: 'description',
     },
     {
       type: 'input',
-      message: 'Please enter installation info: ',
+      message: 'Enter necessary installation info: ',
       name: 'installation',
     },
     {
         type: 'input',
-        message: 'Please enter usage info: ',
+        message: 'Enter usage info: ',
         name: 'usage',
       },
       {
         type: 'input',
         message: 'Please enter license info: ',
         name: 'license',
-        // * Choices gives multiplt options for the input
         choices:['MIT', 'ISC', 'GNUPLv3'],
         filter(val){
           return val.toLowerCase();
         }
+        
       },    
       {
         type: 'input',
